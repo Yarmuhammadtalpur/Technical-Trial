@@ -3,7 +3,7 @@ const contact_fields = {
   name: { label: "Name" },
   position: { label: "Position" },
   email: { label: "Email", type: "email" },
-  invoiceEmail: { label: "Invoice Email", type: "email", required: false },
+  invoiceEmail: { label: "Invoice email", type: "email", required: false },
   telephone: {
     label: "Telephone",
     type: "tel",
@@ -148,7 +148,7 @@ customElements.define(
         dispatchEvent(
           new CustomEvent("toast", {
             detail: {
-              message: "Invalid pharmacist details",
+              message: "invalid pharm details",
               style: "text-bg-danger",
             },
           })
@@ -159,13 +159,13 @@ customElements.define(
       dispatchEvent(
         new CustomEvent("toast", {
           detail: {
-            message: "Application submitted successfully",
+            message: "application submitted successfully",
             style: "text-bg-success",
           },
         })
       );
 
-      this.innerHTML = `<div class="alert alert-success">Thank you. We will contact you.</div>`;
+      this.innerHTML = `<div class="alert alert-success">Thankyou, We'll contact you soon</div>`;
     }
   }
 );
